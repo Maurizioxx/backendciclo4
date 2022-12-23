@@ -1,5 +1,9 @@
+const { application } = require("express");
 const express = require("express");
+const { PORT } = require("./config");
 const routes = express.Router();
+
+
 
 
 // select -------- seleccionar
@@ -105,4 +109,5 @@ routes.get("/:table/:lim", (req, res) => {
    })
  })
 
-module.exports = routes;
+module.exports = routes
+

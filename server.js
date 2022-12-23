@@ -33,3 +33,4 @@ app.use('/api',routes)
 app.listen(app.get('port'),()=>{
     console.log(`El puerto corre en: ${app.get('port')}`)
 })
+

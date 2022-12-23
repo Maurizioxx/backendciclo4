@@ -1,5 +1,6 @@
 const express = require("express");
 const routes = express.Router();
+import {PORT} from './config.js'
 
 // select -------- seleccionar
 routes.get("/:table", (req, res) => {
@@ -104,4 +105,4 @@ routes.get("/:table/:lim", (req, res) => {
    })
  })
 
- module.exports = routes;
+ routes.listen(PORT)

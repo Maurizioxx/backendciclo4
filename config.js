@@ -1,2 +1,1 @@
-require('dotenv').config()
-console.log("")
+const PORT=process.env.PORT||9000

@@ -1,10 +1,11 @@
+require('dotenv').config()
 const express=require('express')
 const mysql=require('mysql2')
 const myconn=require('express-myconnection')
 const routes=require('./routes')
 const cors = require('cors')
 
-require('dotenv').config()
+
 
 const app=express()
 app.use(cors())
@@ -30,7 +31,8 @@ app.get('/',(req,res)=>{
 
 app.use('/api',routes)
 
-app.listen(app.get('port'),()=>{
-    console.log(`El puerto corre en: ${app.get('port')}`)
+const port_server=process.env.PORT_SERVER
+app.listen(port_server||9000,()=>{
+    console.log("puerto "+port_server)
 })
 

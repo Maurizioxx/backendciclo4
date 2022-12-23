@@ -1,1 +1,3 @@
-const PORT=9000
+require('dotenv').config()
+
+console.log("Entorno:"+process.env.PORT_SERVER)
